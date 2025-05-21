@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+</head>
+<body data-bs-spy="scroll" class="bg-body position-relative app-blank">
+    <div class="d-flex flex-column flex-root" id="kt_app_root">
+        <div class="mb-0" id="home">
+            <div >
+                <div class="landing-header" data-kt-sticky="true" data-kt-sticky-name="landing-header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+                    <div class="container">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center flex-equal">
+                                <a>
+                                    <img alt="Logo" src="assets/media/logos/Logo70Black.png" class="logo-default h-25px h-lg-30px" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="~/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="~/assets/js/scripts.bundle.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>

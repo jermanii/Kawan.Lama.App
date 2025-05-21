@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kawan.Lama.App", "Kawan.Lama.App.csproj", "{B9726493-603E-4399-8008-2937210AD6C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kawan.Lama.Architecture", "..\Kawan.Lama.Architecture\Kawan.Lama.Architecture.csproj", "{0398A956-A6B7-4FA9-B161-3095389C3BED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kawan.Lama.Model", "..\Kawan.Lama.Model\Kawan.Lama.Model.csproj", "{F9C5C047-527F-4D76-B0EE-29368F9C9B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kawan.Lama.Todo", "..\Kawan.Lama.Todo\Kawan.Lama.Todo.csproj", "{7EB49B6B-F242-406D-8F9E-153EFB3A3ECC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kawan.Lama.DependencyInjection", "..\Kawan.Lama.DependencyInjection\Kawan.Lama.DependencyInjection.csproj", "{5D296A14-F101-4CF8-8CCB-9DC35A3D5035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kawan.Lama.Tests", "..\Kawan.Lama.Tests\Kawan.Lama.Tests.csproj", "{7292058F-E1D2-46BB-BE74-29DD075827A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9726493-603E-4399-8008-2937210AD6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9726493-603E-4399-8008-2937210AD6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9726493-603E-4399-8008-2937210AD6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9726493-603E-4399-8008-2937210AD6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0398A956-A6B7-4FA9-B161-3095389C3BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0398A956-A6B7-4FA9-B161-3095389C3BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0398A956-A6B7-4FA9-B161-3095389C3BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0398A956-A6B7-4FA9-B161-3095389C3BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C5C047-527F-4D76-B0EE-29368F9C9B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C5C047-527F-4D76-B0EE-29368F9C9B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C5C047-527F-4D76-B0EE-29368F9C9B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C5C047-527F-4D76-B0EE-29368F9C9B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB49B6B-F242-406D-8F9E-153EFB3A3ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB49B6B-F242-406D-8F9E-153EFB3A3ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB49B6B-F242-406D-8F9E-153EFB3A3ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB49B6B-F242-406D-8F9E-153EFB3A3ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D296A14-F101-4CF8-8CCB-9DC35A3D5035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D296A14-F101-4CF8-8CCB-9DC35A3D5035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D296A14-F101-4CF8-8CCB-9DC35A3D5035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D296A14-F101-4CF8-8CCB-9DC35A3D5035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7292058F-E1D2-46BB-BE74-29DD075827A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7292058F-E1D2-46BB-BE74-29DD075827A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7292058F-E1D2-46BB-BE74-29DD075827A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7292058F-E1D2-46BB-BE74-29DD075827A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

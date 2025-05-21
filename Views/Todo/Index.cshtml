@@ -1,0 +1,131 @@
+﻿@model Kawan.Lama.Model.ViewModels.ToDoViewModel
+
+@{
+    ViewData["Title"] = "Todo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+}
+
+<div class="bgi-no-repeat bgi-size-contain bgi-position-x-center bgi-position-y-bottom landing-dark-bg" style="background-image: url(assets/media/svg/illustrations/landing.svg)">
+    <div class="d-flex flex-column align-items-center justify-content-center w-100 min-h-350px min-h-lg-600px px-4">
+        <div class="mb-5">
+            <div class="row g-5 g-xl-12 mb-5">
+                <div class="col-lg-12 col-xl-12">
+                    <div class="card h-xl-100">
+                        <div class="card-header position-relative py-0 border-bottom-2">
+                            <ul class="nav nav-stretch nav-pills nav-pills-custom d-flex mt-3">
+                                <li class="nav-item p-0 ms-0 me-8">
+                                    <a class="nav-link btn btn-color-muted active px-0" data-bs-toggle="pill" href="#kt_timeline_widget_2_tab_1">
+                                        <span class="nav-text fw-semibold fs-4 mb-3">ToDo List</span>
+                                        <span class="bullet-custom position-absolute z-index-2 w-100 h-2px top-100 bottom-n100 bg-primary rounded"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle gs-0 gy-4">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p-0 w-10px"></th>
+                                                    <th class="p-0 w-25px"></th>
+                                                    <th class="p-0 min-w-600px"></th>
+                                                    <th class="p-0 min-w-125px"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if (Model.ToDos != null)
+                                                {
+                                                    @foreach (var rec in Model.ToDos)
+                                                    {
+                                                        <tr>
+                                                            @if (rec.IsCheck.Value)
+                                                            {
+                                                                <td>
+                                                                    <span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-success"></span>
+                                                                </td>
+                                                                <td class="ps-0">
+
+                                                                    <div class="form-check form-check-custom form-check-success form-check-solid">
+                                                                        <input class="form-check-input onCheck" type="checkbox" data-id="@rec.Id" checked="checked" data-kt-element="checkbox" style="cursor: pointer;" />
+                                                                    </div>
+                                                                </td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td>
+                                                                    <span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-primary"></span>
+                                                                </td>
+                                                                <td class="ps-0">
+                                                                    <div class="form-check form-check-custom form-check-solid">
+                                                                        <input class="form-check-input onCheck" type="checkbox" data-id="@rec.Id" data-kt-element="checkbox" style="cursor: pointer;" />
+                                                                    </div>
+                                                                </td>
+                                                            }
+                                                            <td>
+                                                                <a class="text-gray-800 text-hover-primary fw-bold fs-6">@rec.Description</a>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <div class="d-flex justify-content-end flex-shrink-0">
+                                                                    @if (rec.IsCheck.Value)
+                                                                    {
+                                                                        <button data-id="@rec.Id" class="btn btn-icon btn-color-muted btn-bg-light btn-active-color-primary btn-sm me-3" style="cursor: pointer;" disabled="disabled">
+                                                                            <i class="ki-duotone ki-cross-square">
+                                                                                <span class="path1"></span>
+                                                                                <span class="path2"></span>
+                                                                            </i>
+                                                                        </button>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <button data-id="@rec.Id" class="btn btn-icon btn-color-muted btn-bg-light btn-active-color-primary btn-sm me-3 deleteClick" style="cursor: pointer;">
+                                                                            <i class="ki-duotone ki-cross-square" style="color: red;">
+                                                                                <span class="path1"></span>
+                                                                                <span class="path2"></span>
+                                                                            </i>
+                                                                        </button>
+                                                                    }
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 g-xl-12">
+                <div class="col-lg-12 col-xl-12">
+                    <div class="card h-xl-100 p-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <input type="text" id="todoInput" name="input" class="form-control form-control-solid flex-grow-1" placeholder="Write your To-Do's description here and press enter or click submit button on the right.">
+                            <a id="submitBtn" class="btn btn-bg-primary">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var param = (function (param) {
+            param.check = '@Url.Action("Check", controllerName)';
+            param.submit = '@Url.Action("Submit", controllerName)';
+            param.deleted = '@Url.Action("Deleted", controllerName)';
+            return param;
+        })(param || {});
+    </script>
+    <script src="~/js/form/todoJs.js"></script>
+}
